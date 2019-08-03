@@ -9,7 +9,8 @@ class UsersController < ApplicationController
 
   def profile
     user = User.find_by_auth_token!(request.headers[:token])
-    render json: { user: { username: user.username, email: user.email, name: user.name } }
+    user_carts = user.cart
+    render json: { user: { username: user.username, email: user.email, name: user.name }, carts: user.carts }
   end
 
 
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :password, :email, :name)
-  end 
+  end
 
 
 
