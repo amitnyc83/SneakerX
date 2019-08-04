@@ -164,3 +164,47 @@ Migrating to CreateCarts (20190803175441)
   ↳ db/seeds.rb:17
   [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:17
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateProducts (20190804194854)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "title" character varying, "description" character varying, "price" decimal, "quantity" integer, "sku" integer, "cost" decimal, "weight" decimal, "seller_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_seller_id" ON "products"  ("seller_id")[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804194854"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to AddUserTypeAndAddressInfoToUsers (20190804204033)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "type" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "state" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "country" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "zipcode" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804204033"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (40.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
