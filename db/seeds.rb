@@ -10,8 +10,8 @@ User.destroy_all
 Cart.destroy_all
 
 
-testuser1 = User.create!(username: "testuser1", password_digest:BCrypt::Password.create('password'), email:"testuser1@test.com", name:"Jordan1")
-testuser2 = User.create!(username: "testuser2", password_digest:BCrypt::Password.create('password'), email:"testuser2@test.com", name:"Jordan2")
-
-cart1 = Cart.create!(name: "testcart1", quantity: 2, total_price: 20, ordered: false, user: testuser1)
-cart2 = Cart.create!(name: "testcart2", quantity: 4, total_price: 75, ordered: false, user: testuser2)
+# testuser1 = User.create!(username: "testuser1", password_digest:BCrypt::Password.create('password'), name:"Jordan1")
+# testuser2 = User.create!(username: "testuser2", password_digest:BCrypt::Password.create('password'), name:"Jordan2")
+#
+# cart1 = Cart.create!(name: "testcart1", quantity: 2, total_price: 20, ordered: false, user: testuser1)
+# cart2 = Cart.create!(name: "testcart2", quantity: 4, total_price: 75, ordered: false, user: testuser2)
