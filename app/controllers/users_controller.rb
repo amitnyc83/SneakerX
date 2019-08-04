@@ -9,15 +9,32 @@ class UsersController < ApplicationController
 
   def profile
     user = User.find_by_auth_token!(request.headers[:token])
-    user_carts = user.cart
-    render json: { user: { username: user.username, email: user.email, name: user.name }, carts: user.carts }
+    if user.type === "Customer"
+    render json: {
+      username: user.username,
+      email: user.email,
+      name: user.name,
+      type: user.type,
+      address: user.address,
+      city: user.city,
+      state: user.state,
+      country: user.country,
+      zipcode: user.zipcode
+    }
+    else
+      render.json: {
+        username: user.username,
+        email: user.email,
+        name: user.name,
+        type: user.type
+      }
   end
 
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :email, :name)
+    params.require(:user).permit(:username, :password, :email, :name, :type, :address, :city, :state, :country, :zipcode)
   end
 
 

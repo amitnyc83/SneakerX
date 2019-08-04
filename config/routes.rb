@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :carts
 
+
   post 'login' => "sessions#create"
   delete '/logout' => "sessions#destroy"
   get '/profile' => "users#profile"
