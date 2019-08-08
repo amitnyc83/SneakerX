@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import HomePage from './Components/HomePage';
 import UserForm from './Components/UserForm';
+import Header from './Components/Header';
 import './App.css';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <Router>
+        <Header />
        <Switch>
-         <Route path="/signup" exact render={() => (<UserForm />)} />
-         <Route path="/home" exact render={() => (<HomePage />)} />
+         <Route path="/login" exact render={() => (<UserForm />)} />
+         <Route path="/" exact render={() => (<HomePage />)} />
        </Switch>
-      </div>
+     </Router>
     )
   }
 }
