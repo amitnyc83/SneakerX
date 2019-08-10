@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Form, Header, Container, Button, Divider } from 'semantic-ui-react'
 
 
@@ -10,6 +11,100 @@ class UserForm extends Component {
       password: ''
     }
   }
+
+  signUphandleChange = (event) => {
+   console.log(event.target.value)
+   this.setState({
+     [event.target.name]: event.target.value
+    })
+  }
+
+  signUphandleSubmit = (event) => {
+    event.preventDefault()
+    console.log('submitted')
+    const newUser = this.state.user
+    this.props.createNewUser(newUser)
+    fetch(`http://localhost:3001/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accepts: "application/json"
+      },
+      body: JSON.stringify({
+        user: this.state.user
+      })
+    }).then(resp => resp.json())
+    .then(user => {
+      localStorage.setItem('token', user.id)
+      this.setState({
+        user: user
+      })
+    })
+  }
+
+
+  componentDidMount = (props) => {
+    console.log(this.props)
+    //search to see if the user already exists
+    //controller auth in rails
+    let token = localStorage.getItem('token')
+    console.log(token)
+    if (token) {
+      fetch(`http://localhost:3001/current_user`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accepts: "application/json",
+          Authorization: token
+        }
+      }).then(response => response.json())
+      .then(resp => {
+        console.log(resp);
+        this.setState({
+          user:resp
+        })
+        this.props.renderProps.history.push('/cart')
+      })
+    }
+    else {
+      console.log('inside the else ');;
+        // this.history.push('/')
+      // push them to the route you want
+    }
+  }
+
+
+  signInhandleChange = (event) => {
+    // console.log(event.target.value)
+    this.setState({
+      user: {
+        ...this.state.user,
+        [event.target.name]: event.target.value
+      }
+    })
+  }
+
+  signInhandleSubmit = (e) => {
+    e.preventDefault()
+    fetch(`http://localhost:3001/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": 'application/json',
+        Accepts: "applicaton/json"
+      },
+      body: JSON.stringify({
+        user: this.state.user
+      })
+    })
+    .then(response => response.json())
+    .then(resp => { localStorage.setItem("token", resp.jwt)
+     this.setState({
+       user: resp.user
+      })
+    })
+  }
+
+
 
 
   render() {
@@ -51,14 +146,14 @@ class UserForm extends Component {
           Sign In Below For An Existing Account
           <Divider hidden/>
         </Header>
-        <Form onSubmit={this.signUpHandleSubmit}>
+        <Form onSubmit={this.signInHandleSubmit}>
           <Form.Field align='center'>
             <label>Username</label>
             <Form.Input
               width={4}
               name='username'
               type='text'
-              onChange={this.signUpChangeHandle}
+              onChange={this.signInChangeHandle}
               value={this.state.value}
               />
           </Form.Field>
@@ -68,7 +163,7 @@ class UserForm extends Component {
               width={4}
               name='password'
               type='text'
-              onChange={this.signUpChangeHandle}
+              onChange={this.signInChangeHandle}
               value={this.state.value}
               />
           </Form.Field>
@@ -77,6 +172,21 @@ class UserForm extends Component {
       </Container>
       </div>
     )
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    user: this.state.user
+  }
+}
+
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+   createNewUser: (newuser) => {dispatch({type: "NEW_USER", payload: newuser})},
+   signInhandleChange: (userobj) => dispatch({type: "LOG_IN", payload: userobj})
   }
 }
 

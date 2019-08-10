@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import  Nav from 'react-bootstrap/Nav'
-import  Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
+import { Menu } from 'semantic-ui-react'
 
 
-class Navibar extends Component {
-  render(){
+
+
+
+class NavBar extends Component {
+  state = {}
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
     return(
-      <Container>
-       <Navbar bg="dark" variant="dark">
-         <Navbar.Brand class="active" href="/">SneakerX</Navbar.Brand>
-         <Nav className="mr-auto">
-           <Nav.Link href="/home">Home</Nav.Link>
-           <Nav.Link href="/login">Login</Nav.Link>
-           <Nav.Link href="/about">About</Nav.Link>
-          </Nav>
-        </Navbar>
-      </Container>
+      <Menu color='black' inverted widths={6}>
+        <Menu.Item header href='/'>SneakerX</Menu.Item>
+        <Menu.Item
+          href='/'
+          name='home'
+          active={activeItem === 'home'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          href='/login'
+          name='login'
+          active={activeItem === 'login'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          href='about'
+          name='about'
+          active={activeItem === 'about'}
+          onClick={this.handleItemClick}
+        />
+      </Menu>
     )
   }
 }
 
 
-export default Navibar
+export default NavBar;

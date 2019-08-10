@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import HomePage from './Components/HomePage';
-import UserForm from './Components/UserForm';
-import Navibar from './Components/Navbar';
+import HomePage from '../components/HomePage';
+import UserForm from '../components/UserForm';
+import NavBar from '../components/Navbar';
+import Cart from '../components/Cart';
 import './App.css';
 import { BrowserRouter as Router, Switch, withRouter, Route } from 'react-router-dom';
 
@@ -10,10 +11,11 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className="App">
-        <Navibar />
+        <NavBar />
        <Switch>
-         <Route path="/login" exact render={() => (<UserForm />)} />
          <Route path="/" exact render={() => (<HomePage />)} />
+         <Route path="/login" exact render={(renderProps) => (<UserForm renderProps={renderProps} />)} />
+         <Route path="/cart" exact render={() => (<Cart />)} />
        </Switch>
      </div>
      </React.Fragment>
