@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import HomePage from './Components/HomePage';
 import UserForm from './Components/UserForm';
-import Header from './Components/Header';
+import Navibar from './Components/Navbar';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, withRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Header />
+      <React.Fragment>
+        <div className="App">
+        <Navibar />
        <Switch>
          <Route path="/login" exact render={() => (<UserForm />)} />
          <Route path="/" exact render={() => (<HomePage />)} />
        </Switch>
-     </Router>
+     </div>
+     </React.Fragment>
     )
   }
 }
 
 
 
-export default App;
+export default withRouter(App);
