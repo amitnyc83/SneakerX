@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { Form, Header, Container, Button, Divider } from 'semantic-ui-react'
 
 
@@ -13,17 +14,20 @@ class UserForm extends Component {
   }
 
   signUphandleChange = (event) => {
-   console.log(event.target.value)
+   console.log(this.state)
    this.setState({
-     [event.target.name]: event.target.value
+     user: {
+       ...this.state.user,
+       [event.target.name]: event.target.value
+      }
     })
   }
 
   signUphandleSubmit = (event) => {
     event.preventDefault()
     console.log('submitted')
-    const newUser = this.state.user
-    this.props.createNewUser(newUser)
+    // const newUser = this.state.user
+    // this.props.createNewUser(newUser)
     fetch(`http://localhost:3001/users`, {
       method: "POST",
       headers: {
@@ -35,16 +39,17 @@ class UserForm extends Component {
       })
     }).then(resp => resp.json())
     .then(user => {
+      console.log(user)
       localStorage.setItem('token', user.id)
       this.setState({
         user: user
       })
+      this.props.history.push('/cart')
     })
   }
 
 
-  componentDidMount = (props) => {
-    console.log(this.props)
+  componentDidMount = () => {
     //search to see if the user already exists
     //controller auth in rails
     let token = localStorage.getItem('token')
@@ -63,12 +68,13 @@ class UserForm extends Component {
         this.setState({
           user:resp
         })
-        this.props.renderProps.history.push('/cart')
+        this.props.history.push('/cart')
+        // this.props.renderProps.history.push('/cart')
       })
     }
     else {
       console.log('inside the else ');;
-        // this.history.push('/')
+        this.props.history.push('/login')
       // push them to the route you want
     }
   }
@@ -175,21 +181,21 @@ class UserForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    user: this.state.user
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     user: this.state.user
+//   }
+// }
+//
+//
+//
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//    createNewUser: (newuser) => {dispatch({type: "NEW_USER", payload: newuser})},
+//    signInhandleChange: (userobj) => dispatch({type: "LOG_IN", payload: userobj})
+//   }
+// }
 
 
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-   createNewUser: (newuser) => {dispatch({type: "NEW_USER", payload: newuser})},
-   signInhandleChange: (userobj) => dispatch({type: "LOG_IN", payload: userobj})
-  }
-}
-
-
-
-export default UserForm;
+export default withRouter(UserForm);

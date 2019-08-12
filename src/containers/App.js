@@ -9,16 +9,16 @@ import { BrowserRouter as Router, Switch, withRouter, Route } from 'react-router
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <div className="App">
-        <NavBar />
-       <Switch>
-         <Route path="/" exact render={() => (<HomePage />)} />
-         <Route path="/login" exact render={(renderProps) => (<UserForm renderProps={renderProps} />)} />
-         <Route path="/cart" exact render={() => (<Cart />)} />
-       </Switch>
-     </div>
-     </React.Fragment>
+      <div className="App">
+        <NavBar {...this.props}/>
+        <Switch>
+          <React.Fragment>
+            <Route path="/" exact render={() => (<HomePage />)} />
+            <Route path="/login" exact render={(renderProps) => (<UserForm renderProps={renderProps} />)} />
+            <Route path="/cart" exact render={() => (<Cart />)} />
+          </React.Fragment>
+        </Switch>
+      </div>
     )
   }
 }

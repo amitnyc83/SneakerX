@@ -574,3 +574,279 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeTable (20190811024118)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (40.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811024118"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (211.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SneakerX_development"[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (196.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SneakerX_test"[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (551.0ms)[0m  [1m[35mCREATE DATABASE "SneakerX_development" ENCODING = 'unicode'[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (494.6ms)[0m  [1m[35mCREATE DATABASE "SneakerX_test" ENCODING = 'unicode'[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateUsers (20190802153134)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "name" character varying, "auth_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190802153134_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190802153134"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateCarts (20190803175441)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "name" character varying, "quantity" integer, "total_price" decimal, "ordered" boolean, "user_id" bigint, "product_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_user_id" ON "carts"  ("user_id")[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_product_id" ON "carts"  ("product_id")[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190803175441"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateProducts (20190804194854)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "title" character varying, "description" character varying, "price" decimal, "quantity" integer, "sku" integer, "cost" decimal, "weight" decimal, "seller_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_seller_id" ON "products"  ("seller_id")[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804194854"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to AddUserTypeAndAddressInfoToUsers (20190804204033)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "type" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "state" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "country" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "zipcode" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804204033"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to RemoveAddressFromUsers (20190804221632)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "address"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "city"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "state"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "country"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "zipcode"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "auth_token"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804221632"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeTable (20190811024118)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "products" RENAME TO "sneakers"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER INDEX "products_pkey" RENAME TO "sneakers_pkey"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "public"."products_id_seq" RENAME TO "sneakers_id_seq"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_products_on_seller_id" RENAME TO "index_sneakers_on_seller_id"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811024118"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-11 02:48:37.191258"], ["updated_at", "2019-08-11 02:48:37.191258"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDetailsToSneakers (20190811233532)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDetailsToSneakers (20190811233532)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDetailsToSneakers (20190811233532)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeDetailsToSneakers (20190811233532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mALTER TABLE "sneakers" RENAME COLUMN "weight" TO "brand"[0m
+  ↳ db/migrate/20190811233532_change_details_to_sneakers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811233532"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeBrandTypeToSneakers (20190811234522)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811234522"]]
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeBrandTypeToSneakers (20190811234522)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190811234522"]]
+  ↳ bin/rails:9
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeBrandTypeToSneakers (20190811234522)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "brand" TYPE character varying[0m
+  ↳ db/migrate/20190811234522_change_brand_type_to_sneakers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811234522"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
