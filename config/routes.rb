@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 
   resources :users
+  resources :sneakers
 
 
   post '/current_user', to: 'auth#show'

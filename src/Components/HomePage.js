@@ -10,9 +10,11 @@ class HomePage extends Component {
     this.props.fetchSneakers()
   }
 
-  mapSneaker = () => {
-    return(this.props.sneakerItems.Sneakers[0] ?
-    <SneakerContainer sneaker={this.props.sneakerItems.Sneakers[0]} /> : null)
+  mapSneakers = () => {
+    console.log("mapping", this.props.sneakerItems )
+
+    return(this.props.sneakerItems.sneakers[0] ?
+    <SneakerContainer sneaker={this.props.sneakerItems.sneakers[0]} /> : null)
   }
 
 
@@ -30,7 +32,7 @@ class HomePage extends Component {
 
 const mapStateToProps = ({sneakers}) => {
   return {
-    sneakers: sneakers
+    sneakerItems: sneakers
   }
 }
 

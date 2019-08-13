@@ -1,8 +1,5 @@
 const initialState = {
-  user: {
-    username: '',
-    password: ''
-  }
+  user: {}
 }
 
 export const createUser = (state = initialState, action) => {
@@ -13,3 +10,5 @@ export const createUser = (state = initialState, action) => {
   }
   return newState;
 }
+
+export default createUser;
