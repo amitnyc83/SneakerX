@@ -8,13 +8,12 @@ import { Form, Header, Container, Button, Divider } from 'semantic-ui-react'
 class UserForm extends Component {
   state = {
     user: {
-      usernae: '',
+      username: '',
       password: ''
     }
   }
 
   signUphandleChange = (event) => {
-   console.log(this.state)
    this.setState({
      user: {
        ...this.state.user,
@@ -40,7 +39,7 @@ class UserForm extends Component {
     }).then(resp => resp.json())
     .then(user => {
       console.log(user)
-      localStorage.setItem('token', user.id)
+      localStorage.setItem('token', user.jwt)
       this.setState({
         user: user
       })
@@ -56,7 +55,7 @@ class UserForm extends Component {
     console.log(token)
     if (token) {
       fetch(`http://localhost:3001/current_user`, {
-        method: "POST",
+        // method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accepts: "application/json",
@@ -180,7 +179,7 @@ class UserForm extends Component {
     )
   }
 }
-
+//
 // const mapStateToProps = (state) => {
 //   return {
 //     user: this.state.user

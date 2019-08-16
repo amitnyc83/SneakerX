@@ -6,11 +6,11 @@ class SneakersController < ApplicationController
 
 
   def create
-    @sneaker = Sneaker.new(sneaker_params)
+    @sneaker = Sneaker.create(sneaker_params)
     if @sneaker.save
       render json: @shoe
     else
-      render json: { message: sneaker.errors }, status: 400
+      render json: { message: @sneaker.errors }, status: 400
     end
   end
 

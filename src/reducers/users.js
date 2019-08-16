@@ -1,14 +1,16 @@
 const initialState = {
-  user: {}
+  user: []
 }
 
-export const createUser = (state = initialState, action) => {
+
+export default ( state = initialState, action) => {
   const newState = {...state};
   switch(action.type) {
-    case "NEW_USER":
+    case "NEW_USER_SUCCESS":
     return {user: [action.payload]}
-  }
-  return newState;
-}
 
-export default createUser;
+
+    default:
+    return state
+  }
+}

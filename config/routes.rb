@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sneakers
+  resources :carts
 
 
   post '/current_user', to: 'auth#show'

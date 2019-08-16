@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addSneakerCart } from '../actions/cart-actions';
+import SneakerPage from './SneakerPage';
 
 
 class SneakerContainer extends Component {
@@ -7,8 +10,7 @@ class SneakerContainer extends Component {
     return this.props.sneaker.map(sneaker => {
       return
        <div>
-         <h3>{sneaker.name}</h3>
-         <h3>{sneaker.price}</h3>
+         <SneakerPage key={sneaker.id} sneaker={sneaker} />
        </div>
     })
   }

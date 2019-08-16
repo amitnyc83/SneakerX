@@ -1274,3 +1274,191 @@ Processing by SneakersController#index as */*
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/sneakers" for ::1 at 2019-08-13 18:45:55 -0400
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:45:58 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:45:59 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:46:01 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:47:23 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (2.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:47:51 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:48:16 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 18:48:27 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-13 19:25:03 -0400
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.8ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 2.2ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (42.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCart Load (46.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSneaker Create (4.8ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordan1 Low Sb "], ["description", "Following a trend of 2019 Jordan 1 Low releases, Jordan Brand teams up with Nike SB for the Nike SB Air Jordan 1 Low “UNC”, now available on StockX. This shoe draws inspiration from a classic Air Jordan 1 High model that originally released in 1985. The original design incorporated University Blue overlays, a color that has been made famous by Jordan’s alma mater, the University of North Carolina. This historic colorway combined with a long history of the skateboard communities love for the Jordan 1 made this a no brainer collaboration. "], ["price", "420.0"], ["quantity", 10], ["brand", "Nike"], ["created_at", "2019-08-14 17:04:38.380596"], ["updated_at", "2019-08-14 17:04:38.380596"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kyrie 5 SpongeBob"], ["description", "Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tv-themed collection, including the Nike Kyrie 5 “SpongeBob”, now available on StockX. This is Kyrie’s second tv-themed collaboration, the first being a tribute to the sitcom “Friends”. This collection consists of three Kyrie 5 models and two Kyrie Low 2s. All of SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and Sandy) is accounted for in the colorways and design inspiration for this collection. "], ["price", "180.0"], ["quantity", 30], ["brand", "Nike"], ["created_at", "2019-08-14 17:04:38.388594"], ["updated_at", "2019-08-14 17:04:38.388594"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "sku", "cost", "brand", "seller_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Yeezy Boost 350 V2"], ["description", "Like newer 350 V2 models, the adidas Yeezy Boost 350 V2 Lundmark sports a subtle summer color with the back heel tab removed. Replacing the SPLY-350 boost stripe that was traditionally found on the original 350s is a transparent stripe that reveals a more cream colored inner. A boost midsole is covered by a light tan rubber outsole that features a pink middle stripe. Adding to the exclusivity of these is the fact this colorway is a North and Latin America exclusive. "], ["price", "225.0"], ["quantity", 25], ["sku", 9161], ["cost", "70.0"], ["brand", "Adidas"], ["seller_id", 1], ["created_at", "2019-08-14 17:04:38.390937"], ["updated_at", "2019-08-14 17:04:38.390937"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSneaker Create (0.5ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordan1 Low Sb "], ["description", "Following a trend of 2019 Jordan 1 Low releases, Jordan Brand teams up with Nike SB for the Nike SB Air Jordan 1 Low “UNC”, now available on StockX. This shoe draws inspiration from a classic Air Jordan 1 High model that originally released in 1985. The original design incorporated University Blue overlays, a color that has been made famous by Jordan’s alma mater, the University of North Carolina. This historic colorway combined with a long history of the skateboard communities love for the Jordan 1 made this a no brainer collaboration. "], ["price", "420.0"], ["quantity", 10], ["brand", "Nike"], ["created_at", "2019-08-14 17:05:03.068006"], ["updated_at", "2019-08-14 17:05:03.068006"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kyrie 5 SpongeBob"], ["description", "Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tv-themed collection, including the Nike Kyrie 5 “SpongeBob”, now available on StockX. This is Kyrie’s second tv-themed collaboration, the first being a tribute to the sitcom “Friends”. This collection consists of three Kyrie 5 models and two Kyrie Low 2s. All of SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and Sandy) is accounted for in the colorways and design inspiration for this collection. "], ["price", "180.0"], ["quantity", 30], ["brand", "Nike"], ["created_at", "2019-08-14 17:05:03.076388"], ["updated_at", "2019-08-14 17:05:03.076388"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "sku", "cost", "brand", "seller_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Yeezy Boost 350 V2"], ["description", "Like newer 350 V2 models, the adidas Yeezy Boost 350 V2 Lundmark sports a subtle summer color with the back heel tab removed. Replacing the SPLY-350 boost stripe that was traditionally found on the original 350s is a transparent stripe that reveals a more cream colored inner. A boost midsole is covered by a light tan rubber outsole that features a pink middle stripe. Adding to the exclusivity of these is the fact this colorway is a North and Latin America exclusive. "], ["price", "225.0"], ["quantity", 25], ["sku", 9161], ["cost", "70.0"], ["brand", "Adidas"], ["seller_id", 1], ["created_at", "2019-08-14 17:05:03.078995"], ["updated_at", "2019-08-14 17:05:03.078995"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (42.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mCart Load (41.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (5.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "testuser1"], ["password_digest", "$2a$12$OS8hMOsbbnwLEW9usfUyFuP4GUklJpA26EKRG/FQTqgmanrI5oXZK"], ["name", "Jordan1"], ["created_at", "2019-08-16 18:05:13.919386"], ["updated_at", "2019-08-16 18:05:13.919386"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "testuser2"], ["password_digest", "$2a$12$fug7zz1HSA.Lm7Ms0Y/vLeleYB.aW4KIlx7Lc9ZY0K56QY3aWjuVu"], ["name", "Jordan2"], ["created_at", "2019-08-16 18:05:14.163824"], ["updated_at", "2019-08-16 18:05:14.163824"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCart Create (44.5ms)[0m  [1m[32mINSERT INTO "carts" ("name", "quantity", "total_price", "ordered", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "testcart1"], ["quantity", 2], ["total_price", "20.0"], ["ordered", false], ["user_id", 1], ["created_at", "2019-08-16 18:05:14.187418"], ["updated_at", "2019-08-16 18:05:14.187418"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCart Create (0.4ms)[0m  [1m[32mINSERT INTO "carts" ("name", "quantity", "total_price", "ordered", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "testcart2"], ["quantity", 4], ["total_price", "75.0"], ["ordered", false], ["user_id", 2], ["created_at", "2019-08-16 18:05:14.234966"], ["updated_at", "2019-08-16 18:05:14.234966"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordan1 Low Sb "], ["description", "Following a trend of 2019 Jordan 1 Low releases, Jordan Brand teams up with Nike SB for the Nike SB Air Jordan 1 Low “UNC”, now available on StockX. This shoe draws inspiration from a classic Air Jordan 1 High model that originally released in 1985. The original design incorporated University Blue overlays, a color that has been made famous by Jordan’s alma mater, the University of North Carolina. This historic colorway combined with a long history of the skateboard communities love for the Jordan 1 made this a no brainer collaboration. "], ["price", "420.0"], ["quantity", 10], ["brand", "Nike"], ["created_at", "2019-08-16 18:05:14.250745"], ["updated_at", "2019-08-16 18:05:14.250745"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSneaker Create (0.4ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kyrie 5 SpongeBob"], ["description", "Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tv-themed collection, including the Nike Kyrie 5 “SpongeBob”, now available on StockX. This is Kyrie’s second tv-themed collaboration, the first being a tribute to the sitcom “Friends”. This collection consists of three Kyrie 5 models and two Kyrie Low 2s. All of SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and Sandy) is accounted for in the colorways and design inspiration for this collection. "], ["price", "180.0"], ["quantity", 30], ["brand", "Nike"], ["created_at", "2019-08-16 18:05:14.293996"], ["updated_at", "2019-08-16 18:05:14.293996"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "sku", "cost", "brand", "seller_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Yeezy Boost 350 V2"], ["description", "Like newer 350 V2 models, the adidas Yeezy Boost 350 V2 Lundmark sports a subtle summer color with the back heel tab removed. Replacing the SPLY-350 boost stripe that was traditionally found on the original 350s is a transparent stripe that reveals a more cream colored inner. A boost midsole is covered by a light tan rubber outsole that features a pink middle stripe. Adding to the exclusivity of these is the fact this colorway is a North and Latin America exclusive. "], ["price", "225.0"], ["quantity", 25], ["sku", 9161], ["cost", "70.0"], ["brand", "Adidas"], ["seller_id", 1], ["created_at", "2019-08-16 18:05:14.298748"], ["updated_at", "2019-08-16 18:05:14.298748"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22

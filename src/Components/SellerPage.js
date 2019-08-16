@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { fetchSneakers } from '../actions/sneaker_actions';
+import { getSneakers } from '../actions/sneaker_actions';
 import SellerSneakerContainer from '../containers/SellerSneakerContainer';
 
 class SellerPage extends Component {
 
   componentDidMount() {
-    this.props.fetchSneakers()
+    this.props.getSneakers()
   }
 
   mapSneakers = () => {
-    return (this.props.sneakerItems.allSneaker[0] ? <SellerSneakerContainer sneaker={this.props.sneakerItems.allSneakers[0]} /> : null )
+    return (this.props.sneakerItems.allSneaker ? <SellerSneakerContainer sneaker={this.props.sneakerItems.allSneakers} /> : null )
   }
 
   render() {
@@ -31,7 +31,7 @@ const mapStateToProps =({sneakers}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchSneakers: () => dispatch(fetchSneakers())
+    getSneakers: () => dispatch(getSneakers())
   }
 }
 
