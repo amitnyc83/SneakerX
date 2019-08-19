@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addSneakerCart } from '../actions/cart_actions'
+import SneakerPage from '../components/SneakerPage'
 
 
 class SneakerContainer extends Component {
 
   mapSneaker = () => {
     return this.props.sneaker.map(sneaker => {
-      return <div><h3>{sneaker.name}</h3><h3>{sneaker.price}</h3></div>
+      return <div><SneakerPage key={sneaker.id} sneaker={sneaker} /></div>
     })
   }
 

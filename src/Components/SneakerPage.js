@@ -18,7 +18,7 @@ class SneakerPage extends Component {
 
 
 
-  handleSubmit = (event, quantity) => {
+  handleSubmit = (event, cartSneaker ) => {
     event.preventDefault()
     cartSneaker['quantity'] = this.state.quantitySelected;
     this.setState({
@@ -43,7 +43,8 @@ class SneakerPage extends Component {
         product_id: cartSneaker.id
       })
     }).then(response => response.json())
-  }.then(cart => console.log(cart))
+    .then(cart => console.log(cart))
+  }
 
 
   render(){

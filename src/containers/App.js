@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar {...this.props}/>
+        <NavBar />
         <Switch>
           <React.Fragment>
             <Route path="/" exact render={() => (<HomePage />)} />

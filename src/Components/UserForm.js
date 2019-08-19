@@ -8,12 +8,12 @@ import { Form, Header, Container, Button, Divider } from 'semantic-ui-react'
 class UserForm extends Component {
   state = {
     user: {
-      username: '',
-      password: ''
+     username: '',
+     password: ''
     }
   }
 
-  signUphandleChange = (event) => {
+  signUpChangeHandle = (event) => {
    this.setState({
      user: {
        ...this.state.user,
@@ -22,7 +22,7 @@ class UserForm extends Component {
     })
   }
 
-  signUphandleSubmit = (event) => {
+  signUpHandleSubmit = (event) => {
     event.preventDefault()
     console.log('submitted')
     // const newUser = this.state.user
@@ -79,7 +79,7 @@ class UserForm extends Component {
   }
 
 
-  signInhandleChange = (event) => {
+  signInChangeHandle = (event) => {
     // console.log(event.target.value)
     this.setState({
       user: {
@@ -89,7 +89,7 @@ class UserForm extends Component {
     })
   }
 
-  signInhandleSubmit = (e) => {
+  signInHandleSubmit = (e) => {
     e.preventDefault()
     fetch(`http://localhost:3001/login`, {
       method: "POST",
@@ -102,10 +102,11 @@ class UserForm extends Component {
       })
     })
     .then(response => response.json())
-    .then(resp => { localStorage.setItem("token", resp.jwt)
-     this.setState({
-       user: resp.user
-      })
+    .then(resp => {
+       if (resp.jwt) {
+         this.setState({
+        })
+      }
     })
   }
 
