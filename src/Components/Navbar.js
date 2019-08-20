@@ -29,13 +29,19 @@ class NavBar extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          href='seller'
+          href='/seller'
           name='seller'
           active={activeItem === 'seller'}
           onClick={this.handleItemClick}
         />
         <Menu.Item
-          href='about'
+          href='/cart'
+          name='cart'
+          active={activeItem === 'cart'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          href='/about'
           name='about'
           active={activeItem === 'about'}
           onClick={this.handleItemClick}

@@ -3,18 +3,16 @@ const initialState = {
 }
 
 
-const reducer = ( state = initialState, action ) = {
+const reducer = ( state = initialState, action ) => {
   switch(action.type) {
     case "ADD_SNEAKER_CART":
-    const sneakerToCart = action.payload
     return {
-      cartSneaker: [...state.cartSneakers, sneakerToCart]
+      cartSneakers: [...state.cartSneakers, action.payload]
     }
 
 
-    case "GET_CART":
-    const fetchCart = action.payload
-    retun {cartSneakers: fetchcart }
+    case "FETCH_CART":
+    return {cartSneakers: action.payload }
 
 
     default:
@@ -22,4 +20,4 @@ const reducer = ( state = initialState, action ) = {
   }
 }
 
-export
+export default reducer;

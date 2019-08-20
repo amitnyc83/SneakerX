@@ -5,7 +5,7 @@ const initialState = {
 
 export default (state = initialState, action ) => {
   switch(action.type) {
-    case "GET_SNEAKERS_SUCESS":
+    case "GET_SNEAKER_SUCESS":
     return {allSneakers: [action.sneakers]};
 
     case "CREATE_SNEAKER_SUCCESS":

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { getSneakers } from '../actions/sneaker_actions';
+import { fetchSneakers } from '../actions/sneaker_actions';
 import SellerSneakerContainer from '../containers/SellerSneakerContainer';
 
 class SellerPage extends Component {
 
   componentDidMount() {
-    this.props.getSneakers()
+    this.props.fetchSneakers()
   }
 
   mapSneakers = () => {
@@ -31,7 +31,7 @@ const mapStateToProps =({sneakers}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getSneakers: () => dispatch(getSneakers())
+    fetchSneakers: () => dispatch(fetchSneakers())
   }
 }
 

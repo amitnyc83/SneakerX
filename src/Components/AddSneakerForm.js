@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addSneaker } from '../actions/sneaker_actions';
+import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 
 class AddSneakerForm extends Component {
@@ -10,9 +11,9 @@ class AddSneakerForm extends Component {
     image: '',
     description: '',
     price: null,
-    quantity: null,
-    sku: null,
-    cost: null,
+    quantity: '',
+    sku: '',
+    cost: '',
     brand: '',
     seller_id: 1
   }
@@ -50,88 +51,101 @@ class AddSneakerForm extends Component {
     .then(sneaker => console.log(sneaker))
   }
 
+  imageSubmit = () => {
+    var myUploadWidget;
+    myUploadWidget = window.cloudinary.openUploadWidget({
+      cloudName: 'amitscloudmanager',
+      uploadPreset: 'med0uyhi'},
+      (error, result) => {
+        if (result.info.secure_url){
+          this.setState({
+            image: result.info.secure_url
+          }, ()=> {
+            console.log(this.state)})
+          }
+        }
+      );
+    }
 
 
-  render() {
-    return(
-      <React.Fragment>
-        <form onSubmit={this.handleSubmit}>
-          <label>Name</label>
-          <input
-            name='name'
-            type='text'
-            placeholder='Enter a product name'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Brand</label>
-          <input
-            name='brand'
-            type='text'
-            placeholder='Enter a brand'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-          <label>Price</label>
-          <input
-            name='price'
-            type='text'
-            placeholder='Enter a price'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Image</label>
-          <input
-            name='image'
-            type='text'
-            placeholder='Enter an image address'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Description</label>
-          <input
-            name='description'
-            type='text'
-            placeholder='description'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Cost</label>
-          <input
-            name='cost'
-            type='text'
-            placeholder='Enter cost of sneaker'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Quantity</label>
-          <input
-            name='quantity'
-            type='text'
-            placeholder='Enter a quantity'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-        <label>Sku</label>
-          <input
-            name='sku'
-            type='text'
-            placeholder='Enter a SKU number'
-            onChange={this.handleChange}
-            value={this.state.value}
-          />
-          <button>Submit</button>
-        </form>
-      </React.Fragment>
-    )
+
+    render() {
+      return(
+        <React.Fragment>
+          <form onSubmit={this.handleSubmit}>
+            <label>Name</label>
+            <input
+              name='name'
+              type='text'
+              placeholder='Enter a product name'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Brand</label>
+            <input
+              name='brand'
+              type='text'
+              placeholder='Enter a brand'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Price</label>
+            <input
+              name='price'
+              type='text'
+              placeholder='Enter a price'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Description</label>
+            <input
+              name='description'
+              type='text'
+              placeholder='description'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Cost</label>
+            <input
+              name='cost'
+              type='number'
+              placeholder='Enter cost of sneaker'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Quantity</label>
+            <input
+              name='quantity'
+              type='text'
+              placeholder='Enter a quantity'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <label>Sku</label>
+            <input
+              name='sku'
+              type='text'
+              placeholder='Enter a SKU number'
+              onChange={this.handleChange}
+              value={this.state.value}
+            />
+            <div>
+              <CloudinaryContext cloudName='amitscloudmanager' uploadPreset='med0uyhi'>
+                <a id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</a>
+              </CloudinaryContext>
+            </div>
+            <button>Submit</button>
+          </form>
+        </React.Fragment>
+      )
+    }
   }
-}
 
 
 const mapDispatchToProps = (dispatch) => {
   return {
     addSneaker: (newSneaker) => dispatch({
-      type: "CREATE_SNEAKER_SUCESS",
+      type: "ADD_SNEAKER_SUCCESS",
       payload: newSneaker
     })
   }
@@ -139,4 +153,4 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default connect( null, mapDispatchToProps, { addSneaker })(AddSneakerForm);
+export default connect( null, mapDispatchToProps)(AddSneakerForm);

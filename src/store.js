@@ -2,11 +2,13 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk';
 import users from './reducers/users';
 import sneakers from './reducers/sneakers';
+import cartSneakers from './reducers/cartSneakers'
 
 
 const reducers = combineReducers({
   users,
-  sneakers
+  sneakers,
+  cartSneakers
 });
 
 

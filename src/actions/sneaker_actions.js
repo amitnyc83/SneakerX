@@ -1,30 +1,17 @@
 const API_URL = process.env.REACT_APP_API_URL;
 
 
-// ** Actions Creators **
-
-
-const setSneakers = sneakers => {
-  return {
-    type: "GET_SNEAKERS_SUCCESS",
-    sneakers
-  }
-}
-
 
 
 
 // ** Async Actions **
 
 
-export const getSneakers = () => {
+export function fetchSneakers() {
   return (dispatch) => {
     return fetch(`${API_URL}/sneakers`)
     .then(response => response.json())
-    .then(sneakers => {
-      dispatch(setSneakers(sneakers))
-    })
-    .catch(error => console.log(error));
+    .then((data) => dispatch({type: "FETCH_SNEAKERS", payload: data}))
   }
 }
 

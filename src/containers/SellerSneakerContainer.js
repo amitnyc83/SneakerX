@@ -13,6 +13,7 @@ class SellerSneakerContainer extends Component {
         <h4>{sneakerInfo.name}</h4>
         <label>Brand</label>
         <h4>{sneakerInfo.brand}</h4>
+        <img src={sneakerInfo.image} alt='' />
         <label>Price</label>
         <h4>{sneakerInfo.price}</h4>
         <label>Description</label>

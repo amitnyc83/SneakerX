@@ -6,12 +6,12 @@ import { addSneakerCart } from '../actions/cart_actions';
 class SneakerPage extends Component {
   state = {
     selectedSneaker: '',
-    quantitySelected: '',
+    quantitySelected: ''
   }
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      quantitySelected: event.target.value
     })
   }
 
@@ -35,7 +35,7 @@ class SneakerPage extends Component {
         Accept: 'application/json'
       },
       body: JSON.stringify({
-        nam: cartSneaker.name,
+        name: cartSneaker.name,
         quantity: cartSneaker.quantity,
         total_price: 10,
         ordered: false,
@@ -54,7 +54,8 @@ class SneakerPage extends Component {
        <form onSubmit={(event) => this.handleSubmit(event, sneaker)}>
        <div>Name: {sneaker.name}</div>
        <div>Price: {sneaker.price}</div>
-       <div>Number Items in Stock: {sneaker.quantity}</div>
+       <div>Number of Items in Stock: {sneaker.quantity}</div>
+       <div><img src={sneaker.image} alt=''/></div>
         <input
         value={this.state.value}
         type='text'

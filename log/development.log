@@ -1876,3 +1876,317 @@ No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", imag
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/login" for ::1 at 2019-08-19 12:17:42 -0400
+Processing by AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 249ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2019-08-19 12:36:37 -0400
+Processing by AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 246ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2019-08-19 14:18:25 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"testuser1", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 254ms (Views: 5.5ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-19 14:44:30 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.06ms)
+Completed 200 OK in 36ms (Views: 28.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-19 14:44:36 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.15ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-19 14:44:46 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.97ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-19 14:44:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/current_user"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sneakers" for ::1 at 2019-08-19 14:44:51 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.55ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-19 14:44:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/current_user"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/current_user" for ::1 at 2019-08-19 16:26:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/current_user"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/current_user" for ::1 at 2019-08-20 11:04:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/current_user"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.1) lib/rack/cors.rb:81:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/current_user" for ::1 at 2019-08-20 11:13:28 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 114ms (Views: 6.7ms | ActiveRecord: 50.5ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 11:52:23 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (89.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.87ms)
+Completed 200 OK in 117ms (Views: 20.9ms | ActiveRecord: 93.7ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 11:52:27 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 11:53:45 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.79ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 11:53:51 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.27ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 11:53:55 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 11:54:08 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 11:54:11 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 13:08:55 -0400
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'
+Started GET "/sneakers" for ::1 at 2019-08-20 13:09:02 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 13:09:04 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 13:09:04 -0400
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'
+Started GET "/carts" for ::1 at 2019-08-20 13:09:09 -0400
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'
+Started GET "/sneakers" for ::1 at 2019-08-20 13:09:11 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.1ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 13:09:13 -0400
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'

@@ -1,5 +1,8 @@
 const initialState = {
-  user: []
+  user: {
+    username: '',
+    password: ''
+  }
 }
 
 
@@ -11,6 +14,6 @@ export default ( state = initialState, action) => {
 
 
     default:
-    return state
+    return newState
   }
 }

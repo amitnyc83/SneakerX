@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { Form, Header, Container, Button, Divider } from 'semantic-ui-react'
 
@@ -103,9 +103,9 @@ class UserForm extends Component {
     })
     .then(response => response.json())
     .then(resp => {
-       if (resp.jwt) {
-         this.setState({
-        })
+      if (resp.jwt) {
+        localStorage.setItem('token', resp.jwt)
+        this.props.history.push("/cart")
       }
     })
   }
@@ -129,6 +129,7 @@ class UserForm extends Component {
               width={4}
               name='username'
               type='text'
+              placeholder='Username'
               onChange={this.signUpChangeHandle}
               value={this.state.value}
               />
@@ -139,6 +140,7 @@ class UserForm extends Component {
               width={4}
               name='password'
               type='text'
+              placeholder='Password'
               onChange={this.signUpChangeHandle}
               value={this.state.value}
               />
@@ -159,6 +161,7 @@ class UserForm extends Component {
               width={4}
               name='username'
               type='text'
+              placeholder='Username'
               onChange={this.signInChangeHandle}
               value={this.state.value}
               />
@@ -169,6 +172,7 @@ class UserForm extends Component {
               width={4}
               name='password'
               type='text'
+              placeholder='Password'
               onChange={this.signInChangeHandle}
               value={this.state.value}
               />

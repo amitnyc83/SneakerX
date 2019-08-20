@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { addSneakerCart } from '../actions/cart_actions'
+// import { connect } from 'react-redux';
+// import { addSneakerCart } from '../actions/cart_actions'
 import SneakerPage from '../components/SneakerPage'
 
 

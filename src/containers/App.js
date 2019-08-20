@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import HomePage from '../components/HomePage';
 import UserForm from '../components/UserForm';
 import NavBar from '../components/Navbar';
 import Cart from '../components/Cart';
 import SellerPage from '../components/SellerPage';
 import './App.css';
-import { BrowserRouter as Router, Switch, withRouter, Route } from 'react-router-dom';
+import { Switch, withRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {

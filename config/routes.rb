@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :carts
 
 
-  post '/current_user', to: 'auth#show'
+  get '/current_user', to: 'auth#show'
   post '/login', to: 'auth#create'
 
 

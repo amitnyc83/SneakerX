@@ -9,7 +9,7 @@ export const addSneakerCart = (cartSneaker) => {
 }
 
 
-export function getCart() {
+export function fetchCart() {
   return (dispatch) => {
     return fetch(`${API_URL}/carts`)
     .then(response => response.json())

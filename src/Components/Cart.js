@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getCart } from '../actions/cart_actions';
+import { fetchCart } from '../actions/cart_actions';
 import CartSneakersContainer from '../containers/CartSneakersContainer'
 
 
 class Cart extends Component {
 
   componentDidMount(){
-    this.props.getCart()
+    this.props.fetchCart()
   }
 
 
@@ -30,7 +30,7 @@ const mapStateToProps = ({cartSneakers}) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getCart: () => dispatch(getCart())
+    fetchCart: () => dispatch(fetchCart())
   }
 }
 
