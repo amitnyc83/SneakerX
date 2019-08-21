@@ -2190,3 +2190,384 @@ Started GET "/carts" for ::1 at 2019-08-20 13:09:13 -0400
 LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
   
 app/controllers/carts_controller.rb:1:in `<top (required)>'
+Started GET "/sneakers" for ::1 at 2019-08-20 13:13:58 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.72ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 13:14:06 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: 0.42e3, quantity: 10, sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.63ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 13:14:30 -0400
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInCarts (20190820172123)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (66.3ms)[0m  [1m[35mALTER TABLE "carts" ALTER COLUMN "quantity" TYPE character varying[0m
+  ↳ db/migrate/20190820172123_change_columns_to_be_string_in_carts.rb:3
+  [1m[35m (6.4ms)[0m  [1m[35mALTER TABLE "carts" ALTER COLUMN "total_price" TYPE character varying[0m
+  ↳ db/migrate/20190820172123_change_columns_to_be_string_in_carts.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820172123"]]
+  ↳ bin/rails:9
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820173415"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "price" TYPE decimal[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "quantity" TYPE integer[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "sku" TYPE integer[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "cost" TYPE decimal[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:14
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190820173415"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (16.1ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "price" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:3
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "quantity" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:4
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "sku" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:5
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "cost" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820173415"]]
+  ↳ bin/rails:9
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/carts" for ::1 at 2019-08-20 14:52:58 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+LoadError (Unable to autoload constant ApiController, expected /Users/amitsmacbook/Development/code/SneakerX/app/controllers/api_controller.rb to define it):
+  
+app/controllers/carts_controller.rb:1:in `<top (required)>'
+Started GET "/sneakers" for ::1 at 2019-08-20 14:55:24 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (43.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (6.73ms)
+Completed 200 OK in 114ms (Views: 55.0ms | ActiveRecord: 48.2ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 14:58:29 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (3.13ms)
+Completed 200 OK in 52ms (Views: 41.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 20:49:27 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (42.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.81ms)
+Completed 200 OK in 46ms (Views: 3.5ms | ActiveRecord: 42.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 20:50:29 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 126ms (Views: 3.6ms | ActiveRecord: 105.4ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 20:50:29 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (87.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (98.89ms)
+Completed 200 OK in 106ms (Views: 9.2ms | ActiveRecord: 90.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-20 20:51:06 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.87ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 20:51:17 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.19ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 21:14:24 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 21:14:24 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (5.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.67ms)
+Completed 200 OK in 9ms (Views: 2.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-20 21:14:41 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-20 21:14:42 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.74ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+

@@ -18,7 +18,7 @@ class SneakersController < ApplicationController
   private
 
   def set_sneaker
-    @sneaker =Sneaker.find_by(id: params[:id])
+    @sneaker = Sneaker.find_by(id: params[:id])
   end
 
   def sneaker_params

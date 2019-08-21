@@ -1,4 +1,4 @@
-class CartsController < ApiController
+class CartsController < ApplicationController
 
 
   # before_action :require_login, except: [:index, :show]

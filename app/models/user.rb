@@ -3,7 +3,10 @@ class User < ApplicationRecord
 
   validates_uniqueness_of :username, {case_sensitive: false}
   has_secure_password
-  
+
+  scope :customers, -> { where(type: 'Customer') }
+  scope :sellers, -> { where(type: 'Seller') }
+
 
 
   # def invalidate_token
