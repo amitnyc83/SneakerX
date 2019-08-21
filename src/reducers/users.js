@@ -1,19 +1,18 @@
 const initialState = {
-  user: {
-    username: '',
-    password: ''
-  }
+  user: ''
 }
 
 
-export default ( state = initialState, action) => {
-  const newState = {...state};
+const reducer = ( state = initialState, action) => {
   switch(action.type) {
-    case "NEW_USER_SUCCESS":
-    return {user: [action.payload]}
+    case "CURRENT_USER":
+    return {...state, user: [action.payload]}
 
 
     default:
-    return newState
+    return state;
   }
 }
+
+
+export default reducer;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import AddSneakerForm from '../components/AddSneakerForm'
 
 
@@ -34,4 +35,11 @@ class SellerSneakerContainer extends Component {
 }
 
 
-export default SellerSneakerContainer
+const mapStateToProps = (state) => {
+  return {
+    currentUser: state
+  }
+}
+
+
+ export default connect(mapStateToProps)(SellerSneakerContainer);

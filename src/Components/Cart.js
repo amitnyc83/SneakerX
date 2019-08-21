@@ -2,12 +2,28 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCart } from '../actions/cart_actions';
 import CartSneakersContainer from '../containers/CartSneakersContainer'
+import {withRouter} from 'react-router-dom'
 
 
 class Cart extends Component {
 
   componentDidMount(){
-    this.props.fetchCart()
+    let token = localStorage.getItem('token')
+    if (token) {
+      fetch(`http://localhost:3001/current_user`, {
+        headers: {
+          "Content-Type": "application/json",
+          Accepts: "application/json",
+          Authorization: token
+        }
+      }).then(response => response.json())
+      .then(resp => {
+        this.props.fetchCart()
+      })
+     }
+    else {
+      this.props.history.push('/login')
+    }
   }
 
 
@@ -35,4 +51,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default withRouter (connect(mapStateToProps, mapDispatchToProps)(Cart));
