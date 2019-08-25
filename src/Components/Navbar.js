@@ -14,7 +14,7 @@ class NavBar extends Component {
     const { activeItem } = this.state
 
     return(
-      <Menu color='black' inverted widths={6}>
+      <Menu color='black' inverted widths={8}>
         <Menu.Item header href='/'>SneakerX</Menu.Item>
         <Menu.Item
           href='/'
@@ -27,6 +27,12 @@ class NavBar extends Component {
           name='login'
           active={activeItem === 'login'}
           onClick={this.handleItemClick}
+        />
+      <Menu.Item
+        href='/signup'
+        name='signup'
+        active={activeItem === 'signup'}
+        onClick={this.handleItemClick}
         />
         <Menu.Item
           href='/seller'

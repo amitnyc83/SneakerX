@@ -9,6 +9,12 @@ class SellerPage extends Component {
     this.props.fetchSneakers()
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevProps.sneakerItems.allSneakers.length !== this.props.sneakerItems.allSneakers.length) {
+      this.props.fetchSneakers()
+    }
+  }
+
   mapSneakers = () => {
     return (this.props.sneakerItems.allSneaker ? <SellerSneakerContainer sneaker={this.props.sneakerItems.allSneakers} /> : null )
   }

@@ -2704,3 +2704,349 @@ Processing by AuthController#create as */*
 Completed 400 Bad Request in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/sneakers" for ::1 at 2019-08-21 19:59:14 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (45.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.55ms)
+Completed 200 OK in 95ms (Views: 38.3ms | ActiveRecord: 51.2ms)
+
+
+Started POST "/login" for ::1 at 2019-08-21 19:59:49 -0400
+Processing by AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 400 Bad Request in 10ms (Views: 3.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/login" for ::1 at 2019-08-21 19:59:51 -0400
+Processing by AuthController#create as */*
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}, "auth"=>{"user"=>{"username"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 400 Bad Request in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-21 19:59:53 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.75ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-21 19:59:59 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-21 19:59:59 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (42.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (67.02ms)
+Completed 200 OK in 74ms (Views: 13.9ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-21 20:00:52 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.53ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-21 20:00:55 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.12ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-21 20:00:56 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-21 20:00:56 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (2.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.68ms)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-21 20:00:58 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-21 20:00:58 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.09ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:54:15 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (41.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (9.51ms)
+Completed 200 OK in 91ms (Views: 37.3ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:55:04 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.68ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:55:07 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.96ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 11:55:08 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 90ms (Views: 6.0ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 11:55:08 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (10.9ms)
+Completed 200 OK in 16ms (Views: 8.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 11:55:11 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 11:55:12 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.82ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:55:12 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.8ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 11:55:13 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 11:55:13 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (11.0ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (12.71ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:55:15 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.37ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 11:55:17 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.92ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:28:57 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (1.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (3.19ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:29:56 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (4.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.95ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:30:11 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.97ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:35:52 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (3.67ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 13:35:55 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 13:35:55 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 13:35:55 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.11ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:35:59 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 13:36:00 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 13:36:00 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (1.6ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.21ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 13:36:03 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/current_user" for ::1 at 2019-08-25 13:36:03 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/carts" for ::1 at 2019-08-25 13:36:03 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.82ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:36:04 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.71ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-08-25 13:36:05 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.88ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+

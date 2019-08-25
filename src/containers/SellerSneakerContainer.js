@@ -7,7 +7,7 @@ class SellerSneakerContainer extends Component {
 
   sellersProducts = () => {
     return this.props.sneaker.filter(sneaker => {
-      return sneaker['seller_id'] === 1
+      return sneaker['seller_id'] === this.props.currentUser["user_id"]
     }).map(sneakerInfo =>  {
       return <div>
         <label>Name</label>
@@ -35,9 +35,9 @@ class SellerSneakerContainer extends Component {
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (user) => {
   return {
-    currentUser: state
+    currentUser: user.user
   }
 }
 
