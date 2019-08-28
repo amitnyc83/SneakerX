@@ -2,11 +2,30 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchSneakers } from '../actions/sneaker_actions';
 import SellerSneakerContainer from '../containers/SellerSneakerContainer';
+import { withRouter } from 'react-router-dom';
 
 class SellerPage extends Component {
 
   componentDidMount() {
-    this.props.fetchSneakers()
+    let token = localStorage.getItem('token')
+   console.log(token)
+   if (token) {
+     fetch(`http://localhost:3001/current_user`, {
+       headers: {
+         "Content-Type": "application/json",
+         Accepts: "application/json",
+         Authorization: token
+       }
+     }).then(response => response.json())
+     .then(resp => {
+       console.log(resp);
+       this.props.fetchSneakers()
+     })
+    }
+   else {
+     console.log('inside the else', this.props.history);;
+     this.props.history.push('/login')
+   }
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -42,4 +61,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SellerPage);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SellerPage));

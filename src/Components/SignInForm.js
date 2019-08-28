@@ -13,36 +13,6 @@ class SignInForm extends Component {
     }
   }
 
-  componentDidMount = () => {
-    //search to see if the user already exists
-    //controller auth in rails
-    let token = localStorage.getItem('token')
-    console.log(token)
-    if (token) {
-      fetch(`http://localhost:3001/current_user`, {
-        // method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accepts: "application/json",
-          Authorization: token
-        }
-      }).then(response => response.json())
-      .then(resp => {
-        console.log(resp);
-        this.setState({
-          user:resp
-        })
-        this.props.history.push('/cart')
-        // this.props.renderProps.history.push('/cart')
-      })
-    }
-    else {
-      console.log('inside the else ');;
-        this.props.history.push('/login')
-      // push them to the route you want
-    }
-  }
-
 
   signInHandleChange = (event) => {
     this.setState({
