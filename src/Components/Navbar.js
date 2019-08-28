@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react'
+import { connect } from 'react-redux';
+import { deleteUser } from '../actions/user_actions'
 
 
 
@@ -7,6 +9,11 @@ import { Menu } from 'semantic-ui-react'
 
 class NavBar extends Component {
   state = {}
+
+  deleteToken = () => {
+    localStorage.removeItem('token')
+    this.props.deleteUser()
+  }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -52,10 +59,23 @@ class NavBar extends Component {
           active={activeItem === 'about'}
           onClick={this.handleItemClick}
         />
+        <Menu.Item
+          href='/'
+          name='logout'
+          active={activeItem === 'logout'}
+          onClick={this.deleteToken}
+        />
       </Menu>
     )
   }
 }
 
 
-export default NavBar;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteUser: () => dispatch({type: 'DELETE_USER'})
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(NavBar);
