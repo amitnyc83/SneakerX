@@ -15,7 +15,6 @@ class App extends Component {
 
   componentDidMount = () => {
    let token = localStorage.getItem('token')
-   console.log(token)
    if (token) {
      fetch(`http://localhost:3001/current_user`, {
        headers: {
@@ -23,14 +22,12 @@ class App extends Component {
          Accepts: "application/json",
          Authorization: token
        }
-     }).then(response => response.json())
-     .then(resp => {
-       console.log(resp);
+      }).then(response => response.json())
+      .then(resp => {
        this.props.currentUser(resp)
        this.props.history.push("/cart")
-     })
-   }
-
+      })
+    }
   }
 
   render() {

@@ -8,7 +8,7 @@ class SneakersController < ApplicationController
   def create
     @sneaker = Sneaker.create(sneaker_params)
     if @sneaker.save
-      render json: @shoe
+      render json: @sneaker
     else
       render json: { message: @sneaker.errors }, status: 400
     end

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { addSneaker } from '../actions/sneaker_actions';
+import { connect } from 'react-redux';
 import { Image, Video, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 
@@ -14,14 +14,13 @@ class AddSneakerForm extends Component {
     quantity: '',
     sku: '',
     cost: '',
-    brand: '',
-    // seller_id: null
+    brand: ''
   }
 
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name] : event.target.value
     })
   }
 
@@ -48,7 +47,7 @@ class AddSneakerForm extends Component {
         seller_id: this.props.currentUser["user_id"]
       })
     }).then(response => response.json())
-    .then(sneaker => console.log(sneaker))
+    //.then(sneaker => console.log(sneaker))
   }
 
   imageSubmit = () => {
@@ -60,12 +59,10 @@ class AddSneakerForm extends Component {
         if (result.info.secure_url){
           this.setState({
             image: result.info.secure_url
-          }, ()=> {
-            console.log(this.state)
           })
         }
       }
-    )
+    );
   }
 
 
@@ -73,6 +70,10 @@ class AddSneakerForm extends Component {
   render() {
     return(
       <React.Fragment>
+        <div>Add New Sneakers</div>
+        <CloudinaryContext cloudName='amitscloudmanager'>
+          <button id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</button>
+        </CloudinaryContext>
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input
@@ -130,11 +131,6 @@ class AddSneakerForm extends Component {
             onChange={this.handleChange}
             value={this.state.value}
             />
-          <div>
-            <CloudinaryContext cloudName='amitscloudmanager' uploadPreset='med0uyhi'>
-              <a id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</a>
-            </CloudinaryContext>
-          </div>
           <button>Submit</button>
         </form>
       </React.Fragment>

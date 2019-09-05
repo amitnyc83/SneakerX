@@ -7,7 +7,7 @@ const reducer = ( state = initialState, action ) => {
   switch(action.type) {
     case "ADD_SNEAKER_CART":
     return {
-      cartSneakers: [...state.cartSneakers, action.payload]
+      cartSneakers: [...state.cartSneakers.carts, action.payload]
     }
 
 

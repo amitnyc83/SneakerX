@@ -3,7 +3,6 @@ class AuthController < ApplicationController
   def create
     user = User.find_by(username: auth_params[:username])
     if user && user.authenticate(auth_params[:password])
-      # render json: { user_id: use.id, username: user.username }
       token = JWT.encode({user_id: user.id}, 'SECRET')
       render json: {username: user.username, user_id: user.id, jwt: token, type: user.type, user: user.name}
     else

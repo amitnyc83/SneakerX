@@ -7,6 +7,7 @@ import { deleteUser } from '../actions/user_actions'
 
 
 
+
 class NavBar extends Component {
   state = {}
 
@@ -69,6 +70,12 @@ class NavBar extends Component {
     )
   }
 }
+
+// const mapStateToProps = state => {
+//   return {
+//     currentUser: state.user.user
+//   }
+// }
 
 
 const mapDispatchToProps = (dispatch) => {

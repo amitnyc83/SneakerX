@@ -39,7 +39,7 @@ class SneakerPage extends Component {
         quantity: cartSneaker.quantity,
         total_price: 10,
         ordered: false,
-        user_id: 1,
+        user_id: this.props.currentUser.user_id,
         product_id: cartSneaker.id
       })
     }).then(response => response.json())
@@ -67,6 +67,11 @@ class SneakerPage extends Component {
   }
 }
 
+const mapStateToProps = ({user}) => {
+  return {
+    currentUser: user.user
+  }
+}
 
 
 const mapDispatchToProps = (dispatch) => {
@@ -75,4 +80,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(SneakerPage);
+export default connect(mapStateToProps, mapDispatchToProps)(SneakerPage);

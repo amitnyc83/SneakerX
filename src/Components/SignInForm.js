@@ -62,7 +62,7 @@ class SignInForm extends Component {
               name='username'
               type='text'
               placeholder='Username'
-              onChange={this.signInChangeHandle}
+              onChange={this.signInHandleChange}
               value={this.state.value}
               />
           </Form.Field>
@@ -73,7 +73,7 @@ class SignInForm extends Component {
               name='password'
               type='text'
               placeholder='Password'
-              onChange={this.signInChangeHandle}
+              onChange={this.signInHandleChange}
               value={this.state.value}
               />
           </Form.Field>

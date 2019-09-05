@@ -8,7 +8,9 @@ class SignUpForm extends Component {
   state = {
     user: {
       username: '',
-      password: ''
+      password: '',
+      name: '',
+      type: ''
     }
   }
 
@@ -52,13 +54,36 @@ class SignUpForm extends Component {
           </Header>
           <Form onSubmit={this.signUpHandleSubmit}>
            <Form.Field align='center'>
+             <Form.Input
+               width={4}
+               label='Select Account Type'
+               name='type'
+               control='select'
+               onChange={this.signUpHandleChange}>
+               <option value="">Account Type</option>
+               <option value="Customer">Customer</option>
+               <option value="Seller">Seller</option>
+              </Form.Input>
+            </Form.Field>
+            <Form.Field align='center'>
+             <label>Name</label>
+             <Form.Input
+               width={4}
+               name='name'
+               type='text'
+               placeholder='Name'
+               onChange={this.signUpHandleChange}
+               value={this.state.value}
+              />
+            </Form.Field>
+            <Form.Field align='center'>
              <label>Username</label>
              <Form.Input
                width={4}
                name='username'
                type='text'
                placeholder='Username'
-               onChange={this.signUpChangeHandle}
+               onChange={this.signUpHandleChange}
                value={this.state.value}
               />
             </Form.Field>
@@ -69,7 +94,7 @@ class SignUpForm extends Component {
                name='password'
                type='text'
                placeholder='Password'
-               onChange={this.signUpChangeHandle}
+               onChange={this.signUpHandleChange}
                value={this.state.value}
               />
             </Form.Field>

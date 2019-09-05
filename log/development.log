@@ -3776,3 +3776,349 @@ No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", imag
 Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/sneakers" for ::1 at 2019-08-30 10:40:28 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (42.7ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420.0", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-08-14 17:04:38", updated_at: "2019-08-14 17:04:38">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (2.38ms)
+Completed 200 OK in 50ms (Views: 7.2ms | ActiveRecord: 42.7ms)
+
+
+Started POST "/users" for ::1 at 2019-08-30 10:40:53 -0400
+  
+SyntaxError (/Users/amitsmacbook/Development/code/SneakerX/app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+...ser.type, name: @user.name jwt:token }
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (220.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SneakerX_development"[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (208.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "SneakerX_test"[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (518.1ms)[0m  [1m[35mCREATE DATABASE "SneakerX_development" ENCODING = 'unicode'[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (406.2ms)[0m  [1m[35mCREATE DATABASE "SneakerX_test" ENCODING = 'unicode'[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateUsers (20190802153134)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "name" character varying, "auth_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190802153134_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190802153134"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateCarts (20190803175441)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "carts" ("id" bigserial primary key, "name" character varying, "quantity" integer, "total_price" decimal, "ordered" boolean, "user_id" bigint, "product_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_user_id" ON "carts"  ("user_id")[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_carts_on_product_id" ON "carts"  ("product_id")[0m
+  ↳ db/migrate/20190803175441_create_carts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190803175441"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateProducts (20190804194854)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "title" character varying, "description" character varying, "price" decimal, "quantity" integer, "sku" integer, "cost" decimal, "weight" decimal, "seller_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_seller_id" ON "products"  ("seller_id")[0m
+  ↳ db/migrate/20190804194854_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804194854"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to AddUserTypeAndAddressInfoToUsers (20190804204033)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "type" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "address" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "city" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:5
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "users" ADD "state" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "country" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "zipcode" character varying[0m
+  ↳ db/migrate/20190804204033_add_user_type_and_address_info_to_users.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804204033"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to RemoveAddressFromUsers (20190804221632)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "address"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "city"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "state"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "country"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "zipcode"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "auth_token"[0m
+  ↳ db/migrate/20190804221632_remove_address_from_users.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190804221632"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeTable (20190811024118)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "products" RENAME TO "sneakers"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "products_pkey" RENAME TO "sneakers_pkey"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "public"."products_id_seq" RENAME TO "sneakers_id_seq"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_products_on_seller_id" RENAME TO "index_sneakers_on_seller_id"[0m
+  ↳ db/migrate/20190811024118_change_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811024118"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeDetailsToSneakers (20190811233532)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sneakers" RENAME COLUMN "weight" TO "brand"[0m
+  ↳ db/migrate/20190811233532_change_details_to_sneakers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811233532"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeBrandTypeToSneakers (20190811234522)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "brand" TYPE character varying[0m
+  ↳ db/migrate/20190811234522_change_brand_type_to_sneakers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190811234522"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeTitleToImageForSneakers (20190812205455)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sneakers" RENAME COLUMN "title" TO "image"[0m
+  ↳ db/migrate/20190812205455_change_title_to_image_for_sneakers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190812205455"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeColumnsToBeStringInCarts (20190820172123)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "carts" ALTER COLUMN "quantity" TYPE character varying[0m
+  ↳ db/migrate/20190820172123_change_columns_to_be_string_in_carts.rb:3
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "carts" ALTER COLUMN "total_price" TYPE character varying[0m
+  ↳ db/migrate/20190820172123_change_columns_to_be_string_in_carts.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820172123"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to ChangeColumnsToBeStringInSneakers (20190820173415)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "price" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:3
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "quantity" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:4
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "sku" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:5
+  [1m[35m (4.6ms)[0m  [1m[35mALTER TABLE "sneakers" ALTER COLUMN "cost" TYPE character varying[0m
+  ↳ db/migrate/20190820173415_change_columns_to_be_string_in_sneakers.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190820173415"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-04 03:54:16.849350"], ["updated_at", "2019-09-04 03:54:16.849350"]]
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7263456060889306005)[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser1"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at", "type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testuser1"], ["password_digest", "$2a$12$7cAb867JmSoybctkfJ.OeusDO.mgcFbp/l/WO0.GJBJCdNw8Oqvzq"], ["name", "Jordan1"], ["created_at", "2019-09-04 03:56:00.538900"], ["updated_at", "2019-09-04 03:56:00.538900"], ["type", "Customer"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser2"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mSeller Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at", "type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testuser2"], ["password_digest", "$2a$12$1RSraYY.29DFSOo4GvAEsO4oBexk7CcEzTHvIizHTJ8ussddUv0ci"], ["name", "Jordan2"], ["created_at", "2019-09-04 03:56:00.785840"], ["updated_at", "2019-09-04 03:56:00.785840"], ["type", "Seller"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCart Create (0.7ms)[0m  [1m[32mINSERT INTO "carts" ("name", "quantity", "total_price", "ordered", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "testcart1"], ["quantity", "2"], ["total_price", "20"], ["ordered", false], ["user_id", 1], ["created_at", "2019-09-04 03:56:00.814453"], ["updated_at", "2019-09-04 03:56:00.814453"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCart Create (0.3ms)[0m  [1m[32mINSERT INTO "carts" ("name", "quantity", "total_price", "ordered", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "testcart2"], ["quantity", "4"], ["total_price", "75"], ["ordered", false], ["user_id", 2], ["created_at", "2019-09-04 03:56:00.858293"], ["updated_at", "2019-09-04 03:56:00.858293"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSneaker Create (0.6ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jordan1 Low Sb "], ["description", "Following a trend of 2019 Jordan 1 Low releases, Jordan Brand teams up with Nike SB for the Nike SB Air Jordan 1 Low “UNC”, now available on StockX. This shoe draws inspiration from a classic Air Jordan 1 High model that originally released in 1985. The original design incorporated University Blue overlays, a color that has been made famous by Jordan’s alma mater, the University of North Carolina. This historic colorway combined with a long history of the skateboard communities love for the Jordan 1 made this a no brainer collaboration. "], ["price", "420"], ["quantity", "10"], ["brand", "Nike"], ["created_at", "2019-09-04 03:56:00.877845"], ["updated_at", "2019-09-04 03:56:00.877845"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSneaker Create (0.2ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "brand", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Kyrie 5 SpongeBob"], ["description", "Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tv-themed collection, including the Nike Kyrie 5 “SpongeBob”, now available on StockX. This is Kyrie’s second tv-themed collaboration, the first being a tribute to the sitcom “Friends”. This collection consists of three Kyrie 5 models and two Kyrie Low 2s. All of SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and Sandy) is accounted for in the colorways and design inspiration for this collection. "], ["price", "180"], ["quantity", "30"], ["brand", "Nike"], ["created_at", "2019-09-04 03:56:00.880407"], ["updated_at", "2019-09-04 03:56:00.880407"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSneaker Create (0.3ms)[0m  [1m[32mINSERT INTO "sneakers" ("name", "description", "price", "quantity", "sku", "cost", "brand", "seller_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Yeezy Boost 350 V2"], ["description", "Like newer 350 V2 models, the adidas Yeezy Boost 350 V2 Lundmark sports a subtle summer color with the back heel tab removed. Replacing the SPLY-350 boost stripe that was traditionally found on the original 350s is a transparent stripe that reveals a more cream colored inner. A boost midsole is covered by a light tan rubber outsole that features a pink middle stripe. Adding to the exclusivity of these is the fact this colorway is a North and Latin America exclusive. "], ["price", "225"], ["quantity", "25"], ["sku", "9161"], ["cost", "70"], ["brand", "Adidas"], ["seller_id", 1], ["created_at", "2019-09-04 03:56:00.882611"], ["updated_at", "2019-09-04 03:56:00.882611"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/sneakers" for ::1 at 2019-09-04 21:38:36 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (41.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-04 03:56:00", updated_at: "2019-09-04 03:56:00">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (1.91ms)
+Completed 200 OK in 104ms (Views: 45.0ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-04 21:39:13 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-04 03:56:00", updated_at: "2019-09-04 03:56:00">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-04 21:39:39 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-04 03:56:00", updated_at: "2019-09-04 03:56:00">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.64ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2019-09-04 21:40:05 -0400
+  
+SyntaxError (/Users/amitsmacbook/Development/code/SneakerX/app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+...ser.type, name: @user.name jwt: token }
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+Started POST "/users" for ::1 at 2019-09-04 21:40:50 -0400
+  
+SyntaxError (/Users/amitsmacbook/Development/code/SneakerX/app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+...ser.type, name: @user.name jwt: token }
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+Started POST "/users" for ::1 at 2019-09-04 21:47:47 -0400
+  
+SyntaxError (/Users/amitsmacbook/Development/code/SneakerX/app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+...ser.type, name: @user.name jwt: token }
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+Started POST "/users" for ::1 at 2019-09-04 21:48:03 -0400
+  
+SyntaxError (/Users/amitsmacbook/Development/code/SneakerX/app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+...ser.type, name: @user.name jwt: token }
+...                           ^~~~):
+  
+app/controllers/users_controller.rb:9: syntax error, unexpected tLABEL, expecting '}'
+Started POST "/users" for ::1 at 2019-09-04 21:52:22 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"testuser3", "password"=>"[FILTERED]", "name"=>"test3", "type"=>"Seller"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "testuser3"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mSeller Create (6.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at", "type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "testuser3"], ["password_digest", "$2a$12$96rhNnr7reTV4KgCJ3cVUe9RTdxJviseha2mTmWq1U.k.Pm/TBXbm"], ["name", "test3"], ["created_at", "2019-09-05 01:52:22.691350"], ["updated_at", "2019-09-05 01:52:22.691350"], ["type", "Seller"]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "testuser3"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 279ms (Views: 7.7ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-04 21:52:22 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/carts" for ::1 at 2019-09-04 21:52:22 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (5.2ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (20.16ms)
+Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 9.1ms)
+
+
