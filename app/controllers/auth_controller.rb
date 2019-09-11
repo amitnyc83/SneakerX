@@ -3,7 +3,7 @@ class AuthController < ApplicationController
   def create
     user = User.find_by(username: auth_params[:username])
     if user && user.authenticate(auth_params[:password])
-      token = JWT.encode({user_id: user.id}, 'SECRET')[0]
+      token = JWT.encode({user_id: user.id}, 'SECRET')
       render json: {username: user.username, user_id: user.id, jwt: token, type: user.type, user: user.name}
     else
       render json: { message: "Invalid Password" }, status: 400
@@ -12,7 +12,7 @@ class AuthController < ApplicationController
 
   def show
     string = request.authorization
-    token = JWT.decode(string, 'SECRET')
+    token = JWT.decode(string, 'SECRET')[0]
     id = token['user_id'].to_i
     @user = User.find(id)
     if @user

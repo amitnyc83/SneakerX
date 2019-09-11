@@ -14,3 +14,38 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
+input:focus, select {	
+  background-color: rgb(126, 182, 240);
+  width: 5%;
+  padding: 8px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+  weight: 700;
+  font-size: 15px;
+  /* box-sizing: border-box; */
+}
+
+
+label {
+  padding: 5px;
+}
+
+
+.sneaker-attribute{
+  float: left;
+  display: inline;
+  width: 49%;
+}
+
+
+display.content{
+  background: rgb(251, 247, 212) !important;
+  border-style: solid !important;
+  border-color: rgn(201, 237, 196) !important;
+  border-radius: 7px !important;
+}
