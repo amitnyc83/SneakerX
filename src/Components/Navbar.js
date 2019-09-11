@@ -71,7 +71,7 @@ class NavBar extends Component {
   }
 }
 
-// const mapStateToProps = state => {
+// const mapStateToProps = () => {
 //   return {
 //     currentUser: state.user.user
 //   }

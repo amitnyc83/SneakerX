@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomePage from '../components/HomePage';
 import UserForm from '../components/UserForm';
-import NavBar from '../components/Navbar';
+import NavBar from '../components/NavBar';
 import Cart from '../components/Cart';
 import SellerPage from '../components/SellerPage';
 import SignInForm from '../components/SignInForm';

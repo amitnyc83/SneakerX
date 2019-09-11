@@ -4122,3 +4122,590 @@ Processing by CartsController#index as */*
 Completed 200 OK in 28ms (Views: 11.8ms | ActiveRecord: 9.1ms)
 
 
+Started GET "/sneakers" for ::1 at 2019-09-11 01:58:25 -0400
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (60.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.77ms)
+Completed 200 OK in 102ms (Views: 26.7ms | ActiveRecord: 69.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 01:58:57 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.69ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 01:59:01 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.4ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 01:59:05 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.65ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 01:59:07 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.7ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 01:59:10 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+No serializer found for resource: #<Sneaker id: 1, name: "Jordan1 Low Sb ", image: nil, description: "Following a trend of 2019 Jordan 1 Low releases, J...", price: "420", quantity: "10", sku: nil, cost: nil, brand: "Nike", seller_id: nil, created_at: "2019-09-10 04:45:19", updated_at: "2019-09-10 04:45:19">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Sneaker::ActiveRecord_Relation (0.66ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 02:05:14 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.41ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `quanity' for #<Sneaker:0x00007fa5103156e8>
+Did you mean?  quantity
+               quantity?
+               quantity=):
+  
+app/controllers/sneakers_controller.rb:4:in `index'
+Started GET "/sneakers" for ::1 at 2019-09-11 02:05:34 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 02:05:55 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 02:06:04 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.2ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 02:06:05 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 02:47:57 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 200 OK in 21ms (Views: 12.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 03:22:28 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.5ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.2ms)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 03:23:07 -0400
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.84ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2019-09-11 03:35:26 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"Amit", "password"=>"[FILTERED]", "name"=>"Amit ", "type"=>"Customer"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Amit"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mCustomer Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "name", "created_at", "updated_at", "type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "Amit"], ["password_digest", "$2a$12$ExNt6ryLkxtx5nH9FDmSweviZtqZmF.sR1qkDH0AvhMAs1iyXWEA."], ["name", "Amit "], ["created_at", "2019-09-11 07:35:26.993853"], ["updated_at", "2019-09-11 07:35:26.993853"], ["type", "Customer"]]
+  ↳ app/controllers/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) AND "users"."id" != $2 LIMIT $3[0m  [["username", "Amit"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 300ms (Views: 10.5ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 03:35:27 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/carts" for ::1 at 2019-09-11 03:35:27 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (42.3ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (53.57ms)
+Completed 200 OK in 59ms (Views: 8.9ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 03:45:06 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 58ms (Views: 9.5ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 03:45:06 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/carts" for ::1 at 2019-09-11 03:45:06 -0400
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (8.8ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (26.92ms)
+Completed 200 OK in 29ms (Views: 11.2ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 03:45:32 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 38ms (Views: 6.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 03:45:32 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth_controller.rb:17
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Started GET "/carts" for ::1 at 2019-09-11 03:45:32 -0400
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Processing by CartsController#index as */*
+[active_model_serializers]   [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT "carts".* FROM "carts"[0m
+[active_model_serializers]   ↳ app/controllers/carts_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (15.47ms)
+Completed 200 OK in 20ms (Views: 9.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 12:20:37 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:20:37 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:20:56 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:20:56 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:21:56 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:21:57 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:21:58 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:00 -0400
+Started GET "/sneakers" for ::1 at 2019-09-11 12:22:00 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Processing by SneakersController#index as */*
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.92ms)
+Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:01 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:02 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:03 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:03 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:04 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:04 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:08 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:08 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:09 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:11 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/sneakers" for ::1 at 2019-09-11 12:22:12 -0400
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:12 -0400
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (1.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 12:22:40 -0400
+Started GET "/current_user" for ::1 at 2019-09-11 12:22:40 -0400
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (1.3ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.4ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 12:32:53 -0400
+Started GET "/current_user" for ::1 at 2019-09-11 12:32:53 -0400
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (31.9ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.88ms)
+Completed 200 OK in 34ms (Views: 2.3ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 12:35:07 -0400
+Started GET "/current_user" for ::1 at 2019-09-11 12:35:07 -0400
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (47.0ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.82ms)
+Completed 200 OK in 50ms (Views: 2.6ms | ActiveRecord: 47.0ms)
+
+
+Started GET "/sneakers" for ::1 at 2019-09-11 12:46:46 -0400
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:46 -0400
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/amitsmacbook/.rvm/gems/ruby-2.5.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (0.6ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 387ms (Views: 20.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:49 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:50 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:51 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:52 -0400
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+Started GET "/current_user" for ::1 at 2019-09-11 12:46:54 -0400
+Started GET "/sneakers" for ::1 at 2019-09-11 12:46:54 -0400
+Processing by SneakersController#index as */*
+Processing by AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/auth_controller.rb:16:in `[]'
+app/controllers/auth_controller.rb:16:in `show'
+  [1m[36mSneaker Load (1.1ms)[0m  [1m[34mSELECT "sneakers".* FROM "sneakers"[0m
+  ↳ app/controllers/sneakers_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.14ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 1.1ms)
+
+

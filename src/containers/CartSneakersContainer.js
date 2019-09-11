@@ -10,7 +10,7 @@ class CartSneakersContainer extends Component {
   render(){
     return(
       <div>
-       { this.props.currentuser.user_id === this.props.sneakercart.user_id ? this.props.productCart.name : null }
+       { this.props.currentUser.user_id === this.props.sneakerCart.user_id ? this.props.sneakerCart.name : null }
       </div>
     )
   }

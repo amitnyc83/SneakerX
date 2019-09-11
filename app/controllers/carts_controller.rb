@@ -15,9 +15,9 @@ class CartsController < ApplicationController
   end
 
   def create
-    @cart = Cart.create(cart_params)
-    if @cart.save
-      render json: { message: "Cart created", cart: @cart }
+    cart = Cart.create(cart_params)
+    if cart.valid?
+      render json: { message: "Cart created", cart: cart }
     else
       render json: { message: "Cart not created" }
     end

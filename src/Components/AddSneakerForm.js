@@ -21,7 +21,7 @@ class AddSneakerForm extends Component {
   handleChange = (event) => {
     this.setState({
       [event.target.name] : event.target.value
-    })
+    }, () => console.log(this.state))
   }
 
   handleSubmit = (event) => {
@@ -59,6 +59,8 @@ class AddSneakerForm extends Component {
         if (result.info.secure_url){
           this.setState({
             image: result.info.secure_url
+          }, () => {
+            console.log(this.state)
           })
         }
       }
@@ -71,9 +73,6 @@ class AddSneakerForm extends Component {
     return(
       <React.Fragment>
         <div>Add New Sneakers</div>
-        <CloudinaryContext cloudName='amitscloudmanager'>
-          <button id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</button>
-        </CloudinaryContext>
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input
@@ -131,6 +130,9 @@ class AddSneakerForm extends Component {
             onChange={this.handleChange}
             value={this.state.value}
             />
+            <CloudinaryContext cloudName='amitscloudmanager'>
+              <button id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</button>
+            </CloudinaryContext>
           <button>Submit</button>
         </form>
       </React.Fragment>
