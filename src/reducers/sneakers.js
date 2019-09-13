@@ -5,12 +5,13 @@ const initialState = {
 
 const reducer = (state = initialState, action ) => {
   switch(action.type) {
-    case "GET_SNEAKER_SUCCESS":
-    return {...state, allSneakers: [action.payload]};
+    case "FETCH_SNEAKERS":
+    const fetchedSneakers = action.payload
+    return {allSneakers: fetchedSneakers}
 
-    case "CREATE_SNEAKER_SUCCESS":
+    case "ADD_SNEAKER":
     const newSneaker = action.payload;
-    return { ...state, allSneakers: [...state.allSneakers, newSneaker]}
+    return {allSneakers: [...state.allSneakers, newSneaker]}
 
     default:
     return state

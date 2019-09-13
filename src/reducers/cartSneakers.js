@@ -6,9 +6,9 @@ const initialState = {
 const reducer = ( state = initialState, action ) => {
   switch(action.type) {
     case "ADD_SNEAKER_CART":
-    return {
-      cartSneakers: [...state.cartSneakers.carts, action.payload]
-    }
+    const sneakerToCart = action.payload
+    const addArray = [...state.cartSneakers.carts, sneakerToCart]
+    return {cartSneakers: {carts: addArray}}
 
 
     case "FETCH_CART":

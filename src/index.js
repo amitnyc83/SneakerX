@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import App from './containers/App';
-import 'semantic-ui-css/semantic.min.css'
-import { BrowserRouter } from 'react-router-dom';
-import * as serviceWorker from './serviceWorker';
 import './index.css';
-import store from './store.js'
+import App from './containers/App';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from "redux-thunk";
+import index from "./reducers/index";
+import 'semantic-ui-css/semantic.min.css'
+
+
+
+const store = createStore (index, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
