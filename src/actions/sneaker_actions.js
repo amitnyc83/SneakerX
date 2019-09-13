@@ -1,17 +1,11 @@
-const API_URL = process.env.REACT_APP_API_URL;
+// const API_URL = process.env.REACT_APP_API_URL;
 
 
-
-
-
-// ** Async Actions **
-
-
-export function fetchSneakers() {
+export function fetchSneakers(){
   return (dispatch) => {
-    return fetch(`${API_URL}/sneakers`)
+    return fetch(`http://localhost:3001/sneakers`)
     .then(response => response.json())
-    .then((data) => dispatch({type: "FETCH_SNEAKERS", payload: data}))
+    .then((sneakers) => dispatch({type: "FETCH_SNEAKERS", payload: sneakers}))
   }
 }
 

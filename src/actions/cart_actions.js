@@ -1,6 +1,3 @@
-const API_URL = process.env.REACT_APP_API_URL;
-
-
 export const addSneakerCart = (cartSneaker) => {
   return {
     type: "ADD_SNEAKER_CART",
@@ -8,10 +5,19 @@ export const addSneakerCart = (cartSneaker) => {
   }
 }
 
+export const deletedCart = (cart) => {
+  return {
+    type: "DELETE_CART",
+    payload: cart
+  }
+}
+
+
+
 
 export function fetchCart() {
   return (dispatch) => {
-    return fetch(`${API_URL}/carts`)
+    return fetch(`https://localhost:3001/carts`)
     .then(response => response.json())
     .then((data) => dispatch({
       type: "FETCH_CART",
