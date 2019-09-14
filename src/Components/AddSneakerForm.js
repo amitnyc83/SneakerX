@@ -131,7 +131,7 @@ class AddSneakerForm extends Component {
             value={this.state.value}
             />
             <CloudinaryContext cloudName='amitscloudmanager'>
-              <button id="upload_widget_opener" onClick={this.imageSubmit} >Upload Your Images</button>
+              <button id="upload_widget_opener" onClick={this.imageSubmit}><i class="camera icon"></i>Upload Your Image</button>
             </CloudinaryContext>
           <button>Submit</button>
         </form>

@@ -32,7 +32,7 @@ class SneakersController < ApplicationController
     sneaker = Sneaker.find(params[:id])
     sneaker.destroy
     render json: {message: "Sneaker has been deleted"}
-
+  end
 
   private
 

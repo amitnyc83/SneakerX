@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addSneakerCart } from '../actions/cart_actions';
+import IndividualSneakerInfo from './IndividualSneakerInfo';
 
 
 class SneakerPage extends Component {
@@ -43,24 +44,41 @@ class SneakerPage extends Component {
         product_id: cartSneaker.id
       })
     }).then(response => response.json())
-    .then(cart => console.log(cart))
+    .then(cart => {
+      this.props.addSneakerCart(cart)
+    })
+  }
+
+  clickedSneaker = (event, clickedSneaker) => {
+    this.props.sneakerClicked(clickedSneaker)
   }
 
 
   render(){
     const { sneaker } = this.props
+
+    let quantityArray = []
+    for (let i = 1; i < parseInt(sneaker.quantity); i++){
+      quantityArray.push(i)
+    }
     return(
       <div>
        <form onSubmit={(event) => this.handleSubmit(event, sneaker)}>
        <div>Name: {sneaker.name}</div>
        <div>Price: {sneaker.price}</div>
        <div>Number of Items in Stock: {sneaker.quantity}</div>
-       <div><img src={sneaker.image} alt=''/></div>
-        <input
-        value={this.state.value}
-        type='text'
-        onChange={(event) => this.handleChange(event, sneaker)} />
-        <button>Add To Cart</button>
+       <div><img src={sneaker.image} alt='' onClick={(event) => this.clickedSneaker(event, sneaker)}/></div>
+       {parseInt(sneaker.quantity) > 0 ?
+       <React.Fragment>
+          <select onChange={(event) => this.handleChange(event, sneaker)}
+           name="quantitySelected"
+           class="shop icon"><option value="0">Quantity</option>
+           {quantityArray.map(num => <option value={num.toSTring()}>{num}</option>)}
+          </select>
+          <div class="extra">
+            <button class="ui primary button"><i class="shop icon"></i>Add To Cart</button>
+          </div>
+        </React.Fragment> : <span>Sold Out</span>}
         </form>
       </div>
     )

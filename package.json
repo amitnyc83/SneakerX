@@ -5,15 +5,16 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "cloudinary-react": "^1.1.4",
-    "history": "^4.9.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.10",
-    "react-dom": "^16.8.6",
+    "history": "^4.10.1",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.9.0",
     "react-history": "^0.18.2",
-    "react-redux": "^7.1.0",
+    "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.1.1",
     "redux": "^4.0.4",
+    "redux-devtools": "^3.5.0",
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.3"
@@ -40,8 +41,13 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^5.2.4",
-    "craco-less": "^1.9.0",
-    "semantic-ui-less": "^2.4.1"
+    "@craco/craco": "^5.4.0",
+    "craco-less": "^1.12.0",
+    "eslint": "^6.3.0",
+    "react": "^16.9.0",
+    "react-scripts": "^3.1.1",
+    "semantic-ui-less": "^2.4.1",
+    "typescript": "^3.6.3",
+    "redux-devtools-extension": "^2.13.7"
   }
 }

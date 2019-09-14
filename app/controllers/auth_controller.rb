@@ -12,11 +12,12 @@ class AuthController < ApplicationController
 
   def show
     string = request.authorization
+    # byebug
     token = JWT.decode(string, 'SECRET')[0]
-    id = token['user_id'].to_i
+    id = token["user_id"].to_i
     @user = User.find(id)
     if @user
-      render json: { user_id: @user.id, username: @user.username, type: @user.type }
+      render json: { user_id: @user.id, username: @user.username, type: @user.type}
     else
       render json: { error: "User not found" }, status: 422
     end
