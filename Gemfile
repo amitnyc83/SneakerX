@@ -40,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'active_model_serializers'
 
-gem 'rack-cors', '~> 0.4.1'
+gem 'rack-cors', '~> 1.0.5'
 
 gem 'foreman', '~> 0.82.0'
 
